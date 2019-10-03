@@ -10,6 +10,14 @@ Create an array of strings called `colors` that contain "orange", "red", "yellow
 
 Then, using array subscripting and string interpolation, print out the String `"orange, yellow, and lavender are some of my favorite colors"`.
 
+```
+```
+Answer:
+```
+let colors : [String] = ["orange","red","yellow","turquoise","lavender"]
+
+print("\(colors[0]), \(colors[2]), and \(colors[4]) are some of my favorite colors")
+```
 
 ## Question 2
 
