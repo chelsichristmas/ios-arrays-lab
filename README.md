@@ -32,17 +32,61 @@ Iterate through the array below. For each state, print out the name of the state
 
 `let moreStates = ["Hawaii", "New Mexico", "Alaska", "Montana", "Texas", "New York", "Florida"]`
 
+```
+```
+Answer:
+```
+let moreStates = ["Hawaii", "New Mexico", "Alaska", "Montana", "Texas", "New York", "Florida"]
+print("\(moreStates[0]), \(moreStates[1]), and \(moreStates[2]) are not in the conitinental United States. \(moreStates[3]), \(moreStates[4]), \(moreStates[5]), and \(moreStates[6]) are in the continental United States.")
+
+
+```
+
 
 ## Question 4
 
 Print out how many non-whitespace characters are in `myString`:
 
 `let myString = "This is good practice with Strings!"`
+for char in 
+
 
 Iterate through the array below. For each sentence, print out how many non-whitespace characters are in it.
 
 `let myFavoriteQuotes = ["To be or not to be, that is the question.", "The only source of knowledge is experience.", "Mr. Gorbachev, tear down this wall!", "Four score and twenty years ago..."]`
 
+```
+```
+Answer:
+```
+let myString = "This is good practice with Strings!"
+var nonWhiteSpaces = ("")
+for char in myString {
+    if char != " " {
+        nonWhiteSpaces.append(char)
+    }
+}
+print(nonWhiteSpaces.count)
+
+
+
+let myFavoriteQuotes = ["To be or not to be, that is the question.", "The only source of knowledge is experience.", "Mr. Gorbachev, tear down this wall!", "Four score and twenty years ago..."]
+var newString = ("")
+var lastString: String = ("")
+for string in myFavoriteQuotes[0...3] {
+    newString = ("")
+    lastString = ("")
+    newString.append(string)
+for char in newString {
+    if char != " " {
+        lastString.append(char)
+       }
+    }
+    print(lastString.count)
+    
+}
+
+```
 
 ## Question 5
 
@@ -51,6 +95,18 @@ Iterate through `garden` and place any 🌷 that you find into the `basket`. Rep
 ```swift
 var garden = ["dirt","🌷","dirt","🌷","dirt","dirt","🌷","dirt","🌷","dirt"]
 var basket = [String]()
+```
+Answer:
+```
+var garden = ["dirt","🌷","dirt","🌷","dirt","dirt","🌷","dirt","🌷","dirt"]
+var basket = [String]()
+for char in garden {
+    if char == "🌷" {
+        basket.append(char)
+    }
+}
+print(basket)
+print(basket.count)
 ```
 
 ## Question 6
@@ -63,6 +119,20 @@ The below array represents an unfinished batting lineup for a baseball team. **Y
 - Put "Reyes" to bat 8th instead.
 
 `var battingLineup = ["Reyes", "Jeter", "Ramirez", "Pujols","Griffey","Thomas","Jones", "Rodriguez"]`
+
+```
+```
+Answer:
+```
+var battingLineup = ["Reyes", "Jeter", "Ramirez", "Pujols","Griffey","Thomas","Jones", "Rodriguez"]
+
+battingLineup.append("Suzuki")
+battingLineup[1] = "Tejeda"
+battingLineup[5] = "Guerrero"
+battingLineup.remove(at: 0)
+battingLineup.append("Reyes")
+```
+
 
 
 ## Question 7
@@ -88,6 +158,7 @@ target = 32
 //true
 ```
 
+
 Ex. 2
 
 ```swift
@@ -96,6 +167,16 @@ numbers = [32459,2,4,5,1,4,2,1]
 target = 3
 
 //false
+```
+Answer:
+```
+for num in numbers {
+    if num == 32 {
+        print("true")
+    } else {
+        print("false")
+    }
+}
 ```
 
 
@@ -108,6 +189,19 @@ let arrayOfNumbers: [Int] = (1...100).map{ _ in Int.random(in: 0...200)}.map{Int
 
 //This creates an array of 100 numbers in between 0 and 200.  For now, you don't need to worry about how it does that.
 ```
+Answer:
+```
+
+let arrayOfNumbers: [Int] = (1...100).map{ _ in Int.random(in: 0...200)}.map{Int($0)}
+var secondArray: [Int] = [0]
+for num in arrayOfNumbers {
+    if num > secondArray[0] {
+        secondArray.remove(at: 0)
+         secondArray.append(num)
+    }
+}
+print(secondArray)
+```
 
 
 ## Question 9
@@ -119,7 +213,16 @@ let arrayOfNumbers: [Int] = (1...100).map{ _ in Int.random(in: 0...200)}.map{Int
 
 //This creates an array of 100 numbers in between 0 and 200.  For now, you don't need to worry about how it does that.
 ```
-
+Answer:
+```
+var secondArray : [Int] = [5478554]
+for num in arrayOfNumbers {
+    if num < secondArray[0] {
+        secondArray.remove(at: 0)
+        secondArray.append(num)
+    }
+}
+```
 
 ## Question 10
 
@@ -127,6 +230,19 @@ Iterate through `secondListOfNumbers`, and print out all the odd numbers.
 
 `var secondListOfNumbers = [19,13,14,19,101,10000,141,404]`
 
+```
+```
+Answer:
+```
+var secondListOfNumbers = [19,13,14,19,101,10000,141,404]
+var oddNumbersOnly : [Int] = []
+for num in secondListOfNumbers {
+    if (num % 2) == 1 {
+        oddNumbersOnly.append(num)
+    }
+}
+print(oddNumbersOnly)
+```
 
 ## Question 11
 
@@ -134,12 +250,33 @@ Iterate through `thirdListOfNumbers`, and print out the sum.
 
 `var thirdListOfNumbers = [11, 26, 49, 61, 25, 40, 74, 3, 22, 23]`
 
+Answer:
+var thirdListOfNumbers = [11, 26, 49, 61, 25, 40, 74, 3, 22, 23]
+var sumOfThirdList = 0
+for num in thirdListOfNumbers {
+  sumOfThirdList += num
+}
+
+print(sumOfThirdList)
+
+
 
 ## Question 12
 
 Iterate through `thirdListOfNumbers`, and print out the sum of all the even numbers.
 
 `var thirdListOfNumbers = [11, 26, 49, 61, 25, 40, 74, 3, 22, 23]`
+
+Answer:
+var thirdListOfNumbers = [11, 26, 49, 61, 25, 40, 74, 3, 22, 23]
+var sumOfEvenNumsInThirdList = 0
+for num in thirdListOfNumbers {
+    if num % 2 == 0 {
+  sumOfEvenNumsInThirdList += num
+    }
+}
+
+print(sumOfEvenNumsInThirdList)
 
 
 ## Question 13
@@ -151,6 +288,20 @@ var listOne = [28, 64, 7, 96, 13, 32, 94, 11, 80, 68]
 var listTwo = [18, 94, 48, 6, 42, 68, 79, 76, 13, 7]
 var sharedElements = [Int]()
 ```
+Answer:
+
+var listOne = [28, 64, 7, 96, 13, 32, 94, 11, 80, 68]
+var listTwo = [18, 94, 48, 6, 42, 68, 79, 76, 13, 7]
+var sharedElements = [Int]()
+for num in listOne {
+    for number in listTwo {
+        if num == number {
+            sharedElements.append(num)
+        }
+    }
+}
+
+print(sharedElements)
 
 # Part 2
 
