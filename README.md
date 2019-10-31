@@ -250,7 +250,10 @@ Iterate through `thirdListOfNumbers`, and print out the sum.
 
 `var thirdListOfNumbers = [11, 26, 49, 61, 25, 40, 74, 3, 22, 23]`
 
+```
+```
 Answer:
+```
 var thirdListOfNumbers = [11, 26, 49, 61, 25, 40, 74, 3, 22, 23]
 var sumOfThirdList = 0
 for num in thirdListOfNumbers {
@@ -259,7 +262,7 @@ for num in thirdListOfNumbers {
 
 print(sumOfThirdList)
 
-
+```
 
 ## Question 12
 
@@ -267,7 +270,10 @@ Iterate through `thirdListOfNumbers`, and print out the sum of all the even numb
 
 `var thirdListOfNumbers = [11, 26, 49, 61, 25, 40, 74, 3, 22, 23]`
 
+```
+```
 Answer:
+```
 var thirdListOfNumbers = [11, 26, 49, 61, 25, 40, 74, 3, 22, 23]
 var sumOfEvenNumsInThirdList = 0
 for num in thirdListOfNumbers {
@@ -278,7 +284,7 @@ for num in thirdListOfNumbers {
 
 print(sumOfEvenNumsInThirdList)
 
-
+```
 ## Question 13
 
 Append every Int that appears in both `listOne` and `listTwo` to the `sharedElements` array. Then print **how many Ints** are shared.
@@ -288,7 +294,10 @@ var listOne = [28, 64, 7, 96, 13, 32, 94, 11, 80, 68]
 var listTwo = [18, 94, 48, 6, 42, 68, 79, 76, 13, 7]
 var sharedElements = [Int]()
 ```
+```
+```
 Answer:
+```
 
 var listOne = [28, 64, 7, 96, 13, 32, 94, 11, 80, 68]
 var listTwo = [18, 94, 48, 6, 42, 68, 79, 76, 13, 7]
@@ -302,7 +311,7 @@ for num in listOne {
 }
 
 print(sharedElements)
-
+```
 # Part 2
 
 ## Question 1
